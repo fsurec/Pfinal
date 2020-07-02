@@ -1,0 +1,21 @@
+2
+Lapicero
+Bic
+Punta Fina
+2
+3.5
+20
+
+
+
+
+
+
+
+1
+SacaPuntas
+Fast
+Sencillo
+2
+4
+25
