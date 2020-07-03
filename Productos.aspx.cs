@@ -78,9 +78,7 @@ namespace Pfinal
                 producto.Add(tempo);
             }
             reader.Close();
-            dataproductos.DataSource = null;
-            dataproductos.DataSource = producto;
-            dataproductos.DataBind();
+          
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -110,6 +108,18 @@ namespace Pfinal
 
 
             }
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button3_Click1(object sender, EventArgs e)
+        {
+            dataproductos.DataSource = null;
+            dataproductos.DataSource = producto;
+            dataproductos.DataBind();
         }
     }
 }

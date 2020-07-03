@@ -15,7 +15,22 @@ namespace Pfinal
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            var archivo = Server.MapPath("~/Clientes.txt");
+            FileStream stream = new FileStream(archivo, FileMode.Open, FileAccess.Read);
+            StreamReader reader = new StreamReader(stream);
+        
+            while(reader.Peek() > -1)
+            {
+                ClientesC tempo = new ClientesC();
+                tempo.Nit = reader.ReadLine();
+                tempo.Apellido = reader.ReadLine();
+                tempo.Nombre = reader.ReadLine();
+                tempo.Telefono = reader.ReadLine();
+                tempo.Dirección = reader.ReadLine();
 
+                cliente.Add(tempo);
+            }
+            reader.Close();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -51,6 +66,11 @@ namespace Pfinal
              
         }
 
-        
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            dataclientes.DataSource = null;
+            dataclientes.DataSource = cliente;
+            dataclientes.DataBind();
+        }
     }
 }
