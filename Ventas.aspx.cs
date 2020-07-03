@@ -42,9 +42,27 @@ namespace Pfinal
                 listproducto.DataSource = producto;
                 listproducto.DataBind();
             }
-           
 
-            
+            var archivo1 = Server.MapPath("~/Carrito.txt");
+            FileStream stream1 = new FileStream(archivo1, FileMode.Open, FileAccess.Read);
+            StreamReader reader1 = new StreamReader(stream1);
+
+            while (reader1.Peek() > -1)
+            {
+                CarritoC tempo = new CarritoC();
+
+                tempo.Codproducto = reader1.ReadLine();
+                tempo.Nomproducto = reader1.ReadLine();
+                tempo.Precioventa = reader1.ReadLine();
+                tempo.Marca = reader1.ReadLine();
+                tempo.Cantidad = reader1.ReadLine();
+                tempo.Total = Convert.ToDouble(reader1.ReadLine());
+
+                carrito.Add(tempo);
+            }
+            reader1.Close();
+
+            elementos.Text = carrito.Count.ToString();
 
         }
 
@@ -97,16 +115,12 @@ namespace Pfinal
             cantidad.Text = null;
             existencia.Text = null;
 
-        }
-
-        protected void Button2_Click(object sender, EventArgs e)
-        {
             var archivo = Server.MapPath("~/Carrito.txt");
 
             FileStream stream1 = new FileStream(archivo, FileMode.Open, FileAccess.Write);
             StreamWriter writer1 = new StreamWriter(stream1);
 
-            foreach(var p in carrito)
+            foreach (var p in carrito)
             {
                 writer1.WriteLine(p.Codproducto);
                 writer1.WriteLine(p.Nomproducto);
@@ -116,6 +130,14 @@ namespace Pfinal
                 writer1.WriteLine(p.Total);
             }
             writer1.Close();
+
+
+            elementos.Text = carrito.Count.ToString();
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

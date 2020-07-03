@@ -199,7 +199,7 @@
             <td style="width: 143px">&nbsp;</td>
             <td style="width: 98px">&nbsp;</td>
             <td style="width: 95px">&nbsp;</td>
-            <td style="width: 111px">&nbsp;</td>
+            <td style="width: 111px">Para finalizar compra dirígase al Carrito</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
@@ -210,8 +210,7 @@
             <td style="width: 98px">&nbsp;</td>
             <td style="width: 95px">&nbsp;</td>
             <td style="width: 111px">
-                <asp:Button ID="Button2" runat="server" Text="Finalizar Compra" OnClick="Button2_Click" />
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
@@ -229,8 +228,10 @@
             <td style="width: 128px">&nbsp;</td>
             <td style="width: 146px">&nbsp;</td>
             <td style="width: 143px">&nbsp;</td>
-            <td style="width: 98px">&nbsp;</td>
-            <td style="width: 95px">&nbsp;</td>
+            <td style="width: 98px">Elementos en Carrito</td>
+            <td style="width: 95px">
+                <asp:Label ID="elementos" runat="server"></asp:Label>
+            </td>
             <td style="width: 111px">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
