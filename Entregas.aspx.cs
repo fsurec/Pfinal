@@ -18,7 +18,7 @@ namespace Pfinal
             var archivo1 = Server.MapPath("~/Clientes.txt");
 
 
-            FileStream stream1 = new FileStream(archivo1, FileMode.Open, FileAccess.Read);
+            FileStream stream1 = new FileStream(archivo1, FileMode.OpenOrCreate, FileAccess.Read);
             StreamReader reader1 = new StreamReader(stream1);
 
             while (reader1.Peek() > -1)
@@ -38,7 +38,7 @@ namespace Pfinal
 
 
             var archivo2 = Server.MapPath("~/Ventas.txt");
-            FileStream stream2 = new FileStream(archivo2, FileMode.Open, FileAccess.Read);
+            FileStream stream2 = new FileStream(archivo2, FileMode.OpenOrCreate, FileAccess.Read);
             StreamReader reader2 = new StreamReader(stream2);
 
             while (reader2.Peek() > -1)
@@ -60,6 +60,11 @@ namespace Pfinal
             list.DataSource = venta;
             list.DataBind();
             }
+
+            data.DataSource = null;
+            data.DataSource = venta;
+            data.DataBind();
+           
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -98,13 +103,44 @@ namespace Pfinal
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            int h = 0;
-            int j = 0;
+            int s=0;
+            
 
-            for( int i = 0; i > venta.Count; i++)
+            for( int i = 0; i < venta.Count; i++)
             {
+                s = i;
+                if (list.SelectedValue == venta[i].Codventa)
+                {
+                    
+                    break;
+                }
+            }
+            
+            estado.Text = "Entregado";
+            venta[s].Estado = estado.Text;
+
+
+            var archivo = Server.MapPath("~/Ventas.txt");
+
+            File.Delete(archivo);
+
+            FileStream stream = new FileStream(archivo, FileMode.OpenOrCreate, FileAccess.Write);
+            StreamWriter writer = new StreamWriter(stream);
+
+            foreach(var p  in venta)
+            {
+                writer.WriteLine(p.Codventa);
+                writer.WriteLine(p.Nit);
+                writer.WriteLine(p.Fechaventa);
+                writer.WriteLine(p.Totalventa);
+                writer.WriteLine(p.Estado);
 
             }
+            writer.Close();
+
+            data.DataSource = null;
+            data.DataSource = venta;
+            data.DataBind();
         }
     }
 }
