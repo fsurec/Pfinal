@@ -44,7 +44,7 @@ namespace Pfinal
             }
 
             var archivo1 = Server.MapPath("~/Carrito.txt");
-            FileStream stream1 = new FileStream(archivo1, FileMode.Open, FileAccess.Read);
+            FileStream stream1 = new FileStream(archivo1, FileMode.OpenOrCreate, FileAccess.Read);
             StreamReader reader1 = new StreamReader(stream1);
 
             while (reader1.Peek() > -1)
@@ -104,7 +104,14 @@ namespace Pfinal
             temp.Cantidad = cantidad.Text;
 
             Double tot = 0;
-            tot = Convert.ToDouble(precio.Text) * Convert.ToDouble(cantidad.Text);
+            Double price = 0;
+            Double cant = 0;
+
+            price = Convert.ToDouble(precio.Text);
+            cant = Convert.ToDouble(cantidad.Text);
+
+            tot = price * cant;
+
             temp.Total = tot;
 
             carrito.Add(temp);
@@ -116,6 +123,8 @@ namespace Pfinal
             existencia.Text = null;
 
             var archivo = Server.MapPath("~/Carrito.txt");
+
+            
 
             FileStream stream1 = new FileStream(archivo, FileMode.Open, FileAccess.Write);
             StreamWriter writer1 = new StreamWriter(stream1);

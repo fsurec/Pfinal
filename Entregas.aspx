@@ -5,15 +5,7 @@
         <td style="width: 191px">&nbsp;</td>
         <td style="width: 119px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td style="width: 191px">&nbsp;</td>
-        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -25,6 +17,8 @@
         <td style="width: 191px">&nbsp;</td>
         <td style="width: 119px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -33,8 +27,22 @@
     </tr>
     <tr>
         <td style="width: 191px">&nbsp;</td>
-        <td style="width: 119px">Pedidos</td>
+        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="width: 191px">&nbsp;</td>
+        <td style="width: 119px">Codigo Venta</td>
         <td style="width: 114px">Estado</td>
+        <td style="width: 114px">Cliente</td>
+        <td style="width: 114px">Direccion</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -44,14 +52,20 @@
     <tr>
         <td style="width: 191px">&nbsp;</td>
         <td style="width: 119px">
-            <asp:DropDownList ID="DropDownList1" runat="server">
+            <asp:DropDownList ID="list" runat="server">
             </asp:DropDownList>
         </td>
         <td style="width: 114px">
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="estado" runat="server"></asp:Label>
+        </td>
+        <td style="width: 114px" id="asd">
+            <asp:Label ID="txtcliente" runat="server"></asp:Label>
+        </td>
+        <td style="width: 114px">
+            <asp:Label ID="direccion" runat="server"></asp:Label>
         </td>
         <td>
-            <asp:Button ID="Button1" runat="server" Text="Cambiar a Entregado" />
+            <asp:Button ID="Button1" runat="server" Text="Cambiar a Entregado" OnClick="Button1_Click" />
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -62,15 +76,7 @@
         <td style="width: 191px">&nbsp;</td>
         <td style="width: 119px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td style="width: 191px">&nbsp;</td>
-        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -82,6 +88,8 @@
         <td style="width: 191px">&nbsp;</td>
         <td style="width: 119px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -90,7 +98,11 @@
     </tr>
     <tr>
         <td style="width: 191px">&nbsp;</td>
-        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 119px">
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Mostrar" Width="90px" />
+        </td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -102,15 +114,7 @@
         <td style="width: 191px">&nbsp;</td>
         <td style="width: 119px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td style="width: 191px">&nbsp;</td>
-        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -122,15 +126,7 @@
         <td style="width: 191px">&nbsp;</td>
         <td style="width: 119px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td style="width: 191px">&nbsp;</td>
-        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -142,15 +138,7 @@
         <td style="width: 191px">&nbsp;</td>
         <td style="width: 119px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td style="width: 191px">&nbsp;</td>
-        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -162,15 +150,7 @@
         <td style="width: 191px">&nbsp;</td>
         <td style="width: 119px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td style="width: 191px">&nbsp;</td>
-        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -182,15 +162,7 @@
         <td style="width: 191px">&nbsp;</td>
         <td style="width: 119px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td style="width: 191px">&nbsp;</td>
-        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -202,15 +174,7 @@
         <td style="width: 191px">&nbsp;</td>
         <td style="width: 119px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td style="width: 191px">&nbsp;</td>
-        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -222,6 +186,8 @@
         <td style="width: 191px">&nbsp;</td>
         <td style="width: 119px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -231,6 +197,92 @@
     <tr>
         <td style="width: 191px">&nbsp;</td>
         <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="width: 191px">&nbsp;</td>
+        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="width: 191px">&nbsp;</td>
+        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="width: 191px">&nbsp;</td>
+        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="width: 191px">&nbsp;</td>
+        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="width: 191px">&nbsp;</td>
+        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="width: 191px">&nbsp;</td>
+        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="width: 191px">&nbsp;</td>
+        <td style="width: 119px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
+        <td style="width: 114px">&nbsp;</td>
         <td style="width: 114px">&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>

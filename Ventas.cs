@@ -9,15 +9,15 @@ namespace Pfinal
     {
         String codventa;
         String nit;
-        String fechaventa;
+        DateTime fechaventa;
         String totalventa;
-        bool estado;
+        String estado;
 
         public string Codventa { get => codventa; set => codventa = value; }
         public string Nit { get => nit; set => nit = value; }
-        public string Fechaventa { get => Fechaventa1; set => Fechaventa1 = value; }
-        public string Fechaventa1 { get => fechaventa; set => fechaventa = value; }
+        public DateTime Fechaventa { get => fechaventa; set => fechaventa = value; }
         public string Totalventa { get => totalventa; set => totalventa = value; }
-        public bool Estado { get => estado; set => estado = value; }
+        public string Estado { get => estado; set => estado = value; }
+        
     }
 }
