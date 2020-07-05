@@ -97,16 +97,38 @@ namespace Pfinal
             }
             if (vez != 0)
             {
-                producto[conteo].Codproducto = null;
-                producto[conteo].Nomproducto = null;
-                producto[conteo].Marcaproducto = null;
-                producto[conteo].Descrip1 = null;
-                producto[conteo].Preciocompra = null;
-                producto[conteo].Precioventa = null;
-                producto[conteo].Existencias = null; 
+                producto.RemoveAt(conteo-1);
 
+                var archivo = Server.MapPath("~/Productos.txt");
 
+                File.Delete(archivo);
 
+                FileStream stream = new FileStream(archivo, FileMode.OpenOrCreate, FileAccess.Write);
+                StreamWriter writer = new StreamWriter(stream);
+
+                foreach(var p in producto)
+                {
+                    writer.WriteLine(p.Codproducto);
+                    writer.WriteLine(p.Nomproducto);
+                    writer.WriteLine(p.Marcaproducto);
+                    writer.WriteLine(p.Descrip1);
+                    writer.WriteLine(p.Preciocompra);
+                    writer.WriteLine(p.Precioventa);
+                    writer.WriteLine(p.Existencias);
+                }
+                writer.Close();
+
+                 dataproductos.DataSource = null;
+            dataproductos.DataSource = producto;
+            dataproductos.DataBind();
+
+                error.Text = null;
+                
+              
+            }
+            else
+            {
+                error.Text = "No se encontró el producto";
             }
         }
 

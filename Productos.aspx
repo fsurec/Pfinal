@@ -92,7 +92,8 @@
         <td style="width: 135px">&nbsp;</td>
         <td style="width: 135px">&nbsp;</td>
         <td style="width: 73px">
-            &nbsp;</td>
+            <asp:Label ID="error" runat="server"></asp:Label>
+        </td>
         <td style="width: 128px">&nbsp;</td>
         <td style="width: 147px">&nbsp;</td>
         <td>&nbsp;</td>
@@ -192,38 +193,6 @@
         <td style="height: 20px"></td>
         <td style="height: 20px"></td>
         <td style="height: 20px"></td>
-    </tr>
-    <tr>
-        <td>&nbsp;</td>
-        <td style="width: 136px">&nbsp;</td>
-        <td style="width: 130px">&nbsp;</td>
-        <td style="width: 146px">&nbsp;</td>
-        <td style="width: 135px">&nbsp;</td>
-        <td style="width: 135px">&nbsp;</td>
-        <td style="width: 73px">&nbsp;</td>
-        <td style="width: 128px">&nbsp;</td>
-        <td style="width: 147px">&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td>&nbsp;</td>
-        <td style="width: 136px">&nbsp;</td>
-        <td style="width: 130px">Imágen</td>
-        <td style="width: 146px">
-            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-        </td>
-        <td style="width: 135px">&nbsp;</td>
-        <td style="width: 135px">&nbsp;</td>
-        <td style="width: 73px">&nbsp;</td>
-        <td style="width: 128px">&nbsp;</td>
-        <td style="width: 147px">&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
     </tr>
     <tr>
         <td>&nbsp;</td>

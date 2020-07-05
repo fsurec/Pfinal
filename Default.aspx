@@ -13,7 +13,7 @@
     </tr>
     <tr>
         <td class="modal-sm" style="width: 546px">&nbsp;</td>
-        <td class="modal-sm" style="width: 700px">Bienvenidos</td>
+        <td class="modal-sm" style="width: 700px">Bienvenidos a la Tienda Virtual</td>
         <td>&nbsp;</td>
     </tr>
 </table>

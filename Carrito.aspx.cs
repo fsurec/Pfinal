@@ -160,6 +160,10 @@ namespace Pfinal
             dataventa.DataSource = null;
             dataventa.DataSource = carrito;
             dataventa.DataBind();
+
+            error.Text = null;
+            total.Text = null;
+            cventa.Text = null;
         }
     }
 }
